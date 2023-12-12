@@ -52,7 +52,7 @@ public class Juego {
 		}
 	}//fin pintaTablero
 	
-	
+	//
 	public int mueveJugador(String direccion) {
 		
 		int numero=0;
@@ -83,6 +83,21 @@ public class Juego {
 		}
 		
 		return numero;
+		
+	}//fin mueve jugador
+	
+	/* Comprueba si el jugador se encuentra en la misma posición que el tesoro. 
+	 * En caso afirmativo devolverá true y en caso contrario devolverá false.
+	 */
+	public boolean buscaTesoro() {
+		boolean esAcertado=false;
+		if (xJugador==xTesoro&&yJugador==yTesoro){
+			esAcertado=true;
+		}
+		else {
+			esAcertado=false;
+		}
+		return esAcertado;
 		
 	}
 	
